@@ -1,0 +1,391 @@
+
+
+---██╗░░░░░██╗███████╗███████╗  ░██████╗███████╗███╗░░██╗████████╗███████╗███╗░░██╗░█████╗░███████╗
+---██║░░░░░██║██╔════╝██╔════╝  ██╔════╝██╔════╝████╗░██║╚══██╔══╝██╔════╝████╗░██║██╔══██╗██╔════╝
+---██║░░░░░██║█████╗░░█████╗░░  ╚█████╗░█████╗░░██╔██╗██║░░░██║░░░█████╗░░██╔██╗██║██║░░╚═╝█████╗░░
+---██║░░░░░██║██╔══╝░░██╔══╝░░  ░╚═══██╗██╔══╝░░██║╚████║░░░██║░░░██╔══╝░░██║╚████║██║░░██╗██╔══╝░░
+---███████╗██║██║░░░░░███████╗  ██████╔╝███████╗██║░╚███║░░░██║░░░███████╗██║░╚███║╚█████╔╝███████╗
+---╚══════╝╚═╝╚═╝░░░░░╚══════╝  ╚═════╝░╚══════╝╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚══╝░╚════╝░╚══════╝
+
+---██████╗░██╗░░░██╗  ░██████╗░███████╗████████╗██████╗░░░░░██╗░░███╗░░░█████╗░██╗░░░██╗██████╗░░██████╗
+---██╔══██╗╚██╗░██╔╝  ██╔═══██╗██╔════╝╚══██╔══╝██╔══██╗░░░██╔╝░████║░░██╔══██╗██║░░░██║██╔══██╗██╔════╝
+---██████╦╝░╚████╔╝░  ██║██╗██║█████╗░░░░░██║░░░██████╔╝░░██╔╝░██╔██║░░██║░░██║██║░░░██║██████╔╝╚█████╗░
+---██╔══██╗░░╚██╔╝░░  ╚██████╔╝██╔══╝░░░░░██║░░░██╔═══╝░░██╔╝░░╚═╝██║░░██║░░██║██║░░░██║██╔═══╝░░╚═══██╗
+---██████╦╝░░░██║░░░  ░╚═██╔═╝░███████╗░░░██║░░░██║░░░░░██╔╝░░░███████╗╚█████╔╝╚██████╔╝██║░░░░░██████╔╝
+---╚═════╝░░░░╚═╝░░░  ░░░╚═╝░░░╚══════╝░░░╚═╝░░░╚═╝░░░░░╚═╝░░░░╚══════╝░╚════╝░░╚═════╝░╚═╝░░░░░╚═════╝░
+
+
+
+
+local s = Instance.new ("Sound", workspace)
+s.SoundId = 'rbxassetid://530637073'
+s.Volume = 10
+s:Play()
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "DTNO-HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "DTNO-HUB"})
+
+OrionLib:MakeNotification({
+	Name = "WELCOME TO DTNO-HUB",
+	Content = "Give Us Suggestions in Discord!",
+	Image = "rbxassetid://7734021047",
+	Time = 20
+})
+
+
+
+
+
+
+
+--[TABS
+local CreditsTab = Window:MakeTab({
+	Name = "Credit's",
+	Icon = "rbxassetid://7733734762",
+	PremiumOnly = false
+    })
+
+local LocalPlayerTab = Window:MakeTab({
+	Name = "LocalPlayer",
+	Icon = "rbxassetid://7743876054",
+	PremiumOnly = false
+    })
+
+local VisualsTab = Window:MakeTab({
+	Name = "Visual's",
+	Icon = "rbxassetid://7733774602",
+	PremiumOnly = false
+    })
+
+local AutoBuyTab = Window:MakeTab({
+	Name = "AutoBuy-Weapons",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+    })
+
+local AmmoTab = Window:MakeTab({
+	Name = "AutoBuy-Ammo",
+	Icon = "rbxassetid://7733955740",
+	PremiumOnly = false
+    })
+
+local TeleportTab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://7743876754",
+	PremiumOnly = false
+    })
+--]End Of Tabs
+
+--[Labels For Tabs
+    CreditsTab:AddLabel("Owner-qetp.")
+     CreditsTab:AddLabel("Co-Owner-10ups.")
+    LocalPlayerTab:AddLabel("LocalPlayerCheats.")
+    VisualsTab:AddLabel("Different Esp's.")
+    TeleportTab:AddLabel("Click Where You Wanna Teleport.")
+    AutoBuyTab:AddLabel("AutoBuy-Weapons")
+    AmmoTab:AddLabel("AutoBuy-Ammo")
+    --]End Of Labels For Tabs
+
+
+
+
+--[Button's For Tabs
+    LocalPlayerTab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+    LocalPlayerTab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+    VisualsTab:AddButton({
+	Name = "BoxEsp",
+	Callback = function()
+      loadstring(game:HttpGet("https://pastebin.com/raw/E3YXWXXS", true))()
+   end})
+            
+            print("Box Esp Loaded...!")    
+
+TeleportTab:AddButton({
+  Name = "QuickMart",
+  Callback = function()
+    print("Teleported To QuickMart!")    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(924.440491, 3.76461887, 1741.10266, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+ end})
+
+TeleportTab:AddButton({
+  Name = "SurfinBurgers",
+  Callback = function()
+    print("Teleported To SurfinBurgers!")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1112.46484, 3.9059186, 2561.54077, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+  end})
+
+TeleportTab:AddButton({
+  Name = "QualityGuns",
+  Callback = function()
+  print("Teleported To QualityGuns!")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(964.504028, 3.7644527, 2028.25513, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+ end})
+
+  TeleportTab:AddButton({
+  Name = "ToolDepot",
+  Callback = function()
+  print("Teleported To ToolDepot!")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(515.119568, 3.7644527, 2327.65186, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+ end})
+
+  TeleportTab:AddButton({
+  Name = "Bank",
+  Callback = function()
+  print("Teleported To Bank!")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(925.988525, -0.508455992, 2573.67822, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+
+ end})
+
+
+  AutoBuyTab:AddButton({
+  Name = "BuyRevolver",
+  Callback = function()
+  print("Bought Revolver")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(962.649292, 3, 2040.6189, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+ local args = {
+    [1] = "BuyItemFromShop",
+    [2] = "3",
+    [3] = "QualityGunsItems",
+    [4] = workspace:WaitForChild("Ignore"):WaitForChild("QualityGunsButton")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+
+
+  AutoBuyTab:AddButton({
+  Name = "BuyGlock",
+  Callback = function()
+  print("Bought Glock")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(962.649292, 3, 2040.6189, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+local args = {
+    [1] = "BuyItemFromShop",
+    [2] = "2",
+    [3] = "QualityGunsItems",
+    [4] = workspace:WaitForChild("Ignore"):WaitForChild("QualityGunsButton")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+
+  AutoBuyTab:AddButton({
+  Name = "BuyArmor",
+  Callback = function()
+  print("Bought Armor")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(962.649292, 3, 2040.6189, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+local args = {
+    [1] = "BuyItemFromShop",
+    [2] = "1",
+    [3] = "QualityGunsItems",
+    [4] = workspace:WaitForChild("Ignore"):WaitForChild("QualityGunsButton")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+
+  AutoBuyTab:AddButton({
+  Name = "BuyPumpShotgun",
+  Callback = function()
+  print("Bought PumpShotgun")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(962.649292, 3, 2040.6189, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+local args = {
+    [1] = "BuyItemFromShop",
+    [2] = "4",
+    [3] = "QualityGunsItems",
+    [4] = workspace:WaitForChild("Ignore"):WaitForChild("QualityGunsButton")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+
+   AutoBuyTab:AddButton({
+  Name = "BuyTech-9",
+  Callback = function()
+  print("Bought Tech-9")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(962.649292, 3, 2040.6189, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+local args = {
+    [1] = "BuyItemFromShop",
+    [2] = "5",
+    [3] = "QualityGunsItems",
+    [4] = workspace:WaitForChild("Ignore"):WaitForChild("QualityGunsButton")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+
+   AutoBuyTab:AddButton({
+  Name = "BuyDrako",
+  Callback = function()
+  print("Bought Drako")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(962.649292, 3, 2040.6189, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+local args = {
+    [1] = "BuyItemFromShop",
+    [2] = "6",
+    [3] = "QualityGunsItems",
+    [4] = workspace:WaitForChild("Ignore"):WaitForChild("QualityGunsButton")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+
+   AutoBuyTab:AddButton({
+  Name = "BuyARP",
+  Callback = function()
+  print("Bought ARP")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(962.649292, 3, 2040.6189, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+local args = {
+    [1] = "BuyItemFromShop",
+    [2] = "7",
+    [3] = "QualityGunsItems",
+    [4] = workspace:WaitForChild("Ignore"):WaitForChild("QualityGunsButton")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+
+   AutoBuyTab:AddButton({
+  Name = "BuyM4A1",
+  Callback = function()
+  print("Bought M4A1")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(962.649292, 3, 2040.6189, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+local args = {
+    [1] = "BuyItemFromShop",
+    [2] = "8",
+    [3] = "QualityGunsItems",
+    [4] = workspace:WaitForChild("Ignore"):WaitForChild("QualityGunsButton")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+
+
+AmmoTab:AddButton({
+  Name = "Revolver-Ammo",
+  Callback = function()
+  print("Bought Revolver-Ammo")
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(945.714661, 2.97577405, 2018.58801, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+    local args = {
+    [1] = "BuyAmmo",
+    [2] = "Store Revolver"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+    
+AmmoTab:AddButton({
+  Name = "Glock-Ammo",
+  Callback = function()
+  print("Bought Glock-Ammo")
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(945.714661, 2.97577405, 2018.58801, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+    local args = {
+    [1] = "BuyAmmo",
+    [2] = "Store Glock"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end}) 
+    
+    AmmoTab:AddButton({
+  Name = "TEC-9-Ammo",
+  Callback = function()
+  print("Bought TEC-9-Ammo")
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(945.714661, 2.97577405, 2018.58801, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+local args = {
+    [1] = "BuyAmmo",
+    [2] = "Store TEC-9"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+
+
+AmmoTab:AddButton({
+  Name = "PumpShotgun-Ammo",
+  Callback = function()
+  print("Bought Pump-Ammo")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(945.714661, 2.97577405, 2018.58801, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+local args = {
+    [1] = "BuyAmmo",
+    [2] = "Store Pump Shotgun"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+
+AmmoTab:AddButton({
+    Name = "ARP-Ammo",
+    Callback = function()
+    print("Bought ARP-Ammo")
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(945.714661, 2.97577405, 2018.58801, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+  
+local args = {
+    [1] = "BuyAmmo",
+    [2] = "Store ARP"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+
+AmmoTab:AddButton({
+    Name = "M4A1-Ammo",
+    Callback = function()
+    print("Bought M4A1-Ammo")
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(945.714661, 2.97577405, 2018.58801, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+ 
+local args = {
+    [1] = "BuyAmmo",
+    [2] = "Store AR"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+
+AmmoTab:AddButton({
+    Name = "Drako-Ammo",
+    Callback = function()
+    print("Bought Drako-Ammo")
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(945.714661, 2.97577405, 2018.58801, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+local args = {
+    [1] = "BuyAmmo",
+    [2] = "Store Draco"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+    --]End Of Button's For Tabs
+
+    
