@@ -78,7 +78,8 @@ local TeleportTab = Window:MakeTab({
 
 --[Labels For Tabs
     CreditsTab:AddLabel("Owner-qetp.")
-     CreditsTab:AddLabel("Co-Owner-10ups.")
+    CreditsTab:AddLabel("Help-NoOne:(")
+    CreditsTab:AddLabel("Still-Working-On-This!.")
     LocalPlayerTab:AddLabel("LocalPlayerCheats.")
     VisualsTab:AddLabel("Different Esp's.")
     TeleportTab:AddLabel("Click Where You Wanna Teleport.")
@@ -91,15 +92,25 @@ local TeleportTab = Window:MakeTab({
 
 --[Button's For Tabs
     LocalPlayerTab:AddButton({
-	Name = "Button!",
+	Name = "FullBright",
 	Callback = function()
-      		print("button pressed")
+     game.Lighting.Changed:connect(function()
+    game.Lighting.TimeOfDay = "14:00:00"
+    game.Lighting.FogEnd = 9999
+    game.Lighting.Brightness = 2
+    game.Lighting.GlobalShadows = false
+    game.Lighting.ColorCorrection.Brightness = 0.1
+    game.Lighting.ColorCorrection.Saturation = 0.1
+    game.Lighting.Bloom.Intensity = 0.1
+end)
+      		print("FullBright Working...")
   	end    
 })
     LocalPlayerTab:AddButton({
-	Name = "Button!",
+	Name = "Rejoin Server!",
 	Callback = function()
-      		print("button pressed")
+    loadstring(game:HttpGet("https://pastebin.com/raw/NfbL6xJq", true))()  		
+            print("Rejoined Server")
   	end    
 })
     VisualsTab:AddButton({
