@@ -56,6 +56,11 @@ local VisualsTab = Window:MakeTab({
 	Icon = "rbxassetid://7733774602",
 	PremiumOnly = false
     })
+local FoodTab = Window:MakeTab({
+	Name = "AutoBuy-Food",
+	Icon = "rbxassetid://7743876754",
+	PremiumOnly = false
+    }) 
 
 local AutoBuyTab = Window:MakeTab({
 	Name = "AutoBuy-Weapons",
@@ -74,6 +79,8 @@ local TeleportTab = Window:MakeTab({
 	Icon = "rbxassetid://7743876754",
 	PremiumOnly = false
     })
+
+
 --]End Of Tabs
 
 --[Labels For Tabs
@@ -85,6 +92,7 @@ local TeleportTab = Window:MakeTab({
     TeleportTab:AddLabel("Click Where You Wanna Teleport.")
     AutoBuyTab:AddLabel("AutoBuy-Weapons")
     AmmoTab:AddLabel("AutoBuy-Ammo")
+    FoodTab:AddLabel("AutoBuy-Food")
     --]End Of Labels For Tabs
 
 
@@ -397,6 +405,61 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Weapon
 wait(2)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 end})
-    --]End Of Button's For Tabs
+ 
+ 
+ FoodTab:AddButton({
+    Name = "Burger-Food",
+    Callback = function()
+    print("Bought Burger-Food")
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1109.87183, 4.227710307, 2573.36597, 0, 1, -0, -1, 0, 0, 0, 0, 1)
 
-    
+ local args = {
+    [1] = "BuyItemFromShop",
+    [2] = "1",
+    [3] = "SurfinBurgerItems",
+    [4] = workspace:WaitForChild("Ignore"):WaitForChild("SurfinBurgerButton")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+ 
+  FoodTab:AddButton({
+    Name = "Bloxy-Drink",
+    Callback = function()
+    print("Bought Bloxy-Drink")
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1109.87183, 4.227710307, 2573.36597, 0, 1, -0, -1, 0, 0, 0, 0, 1)
+
+ local args = {
+    [1] = "BuyItemFromShop",
+    [2] = "2",
+    [3] = "SurfinBurgerItems",
+    [4] = workspace:WaitForChild("Ignore"):WaitForChild("SurfinBurgerButton")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+
+ wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+ 
+ FoodTab:AddButton({
+    Name = "Water-Drink",
+    Callback = function()
+    print("Bought Water-Drink")
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1109.87183, 4.227710307, 2573.36597, 0, 1, -0, -1, 0, 0, 0, 0, 1)
+local args = {
+    [1] = "BuyItemFromShop",
+    [2] = "3",
+    [3] = "SurfinBurgerItems",
+    [4] = workspace:WaitForChild("Ignore"):WaitForChild("SurfinBurgerButton")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("WeaponEvent"):FireServer(unpack(args))
+
+
+ wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(932.322998, 7.59986973, 95.9544449, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end})
+    --]End Of Button's For Tabs
